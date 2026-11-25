@@ -1,12 +1,24 @@
-# kemjar-auth-lab
+# Kemjar Auth Lab
 
-proyek akhir praktikum keamanan jaringan 2026, fokus ke no API authentication sama insecure change password feature
+Proyek Akhir Praktikum Keamanan Jaringan 2026
 
-## tujuan
+**Kelompok 18**
+
+| Nama | NPM |
+| --- | --- |
+| Zulfahmi Fajri | 2406345425 |
+| Muhammad Hashif Jade | 2406396786 |
+
+**Topik**
+
+- No API Authentication
+- Insecure Change Password Feature
+
+## Tujuan
 
 bikin aplikasi web sederhana sendiri, trus ngikutin alur SOP dari pembuatan target, enumerasi, eksploitasi, perbaikan, sampe pengujian ulang
 
-## rencana sistem
+## Rencana Sistem
 
 - backend pake PHP native
 - database pake sqlite
@@ -14,7 +26,7 @@ bikin aplikasi web sederhana sendiri, trus ngikutin alur SOP dari pembuatan targ
 - interaksi API pake javascript bawaan browser
 - aplikasi jalan di laptop masing masing, github buat simpen kode sama catatan perubahan
 
-## fitur yg direncanain
+## Fitur yang Direncanain
 
 - dua akun uji dgan data fiktif
 - login sama logout pake sesi
@@ -22,9 +34,7 @@ bikin aplikasi web sederhana sendiri, trus ngikutin alur SOP dari pembuatan targ
 - formulir ubah kata sandi
 - versi rentan sama versi perbaikan
 
-## checklist pengerjaan
-
-centang bagian setelah beneran selesai dan dicek bareng
+## Progres Pengerjaan
 
 - [x] nyiapin lingkungan PHP sama ekstensi PDO sqlite
 - [x] bikin kerangka halaman awal
@@ -37,25 +47,20 @@ centang bagian setelah beneran selesai dan dicek bareng
 - [ ] nguji ulang serangan sama alur pengguna yg sah
 - [ ] nyusun laporan sama nyiapin demo
 
-## aturan kerja
+## Jalanin Lokal
 
-- commit tiap bagian yg udah bisa dicek, tulis perubahan yg beneran dikerjain
-- masing masing pake akun git sendiri buat kontribusinya
-- tarik perubahan terbaru sbelum mulai, kabarin kalo mau ngubah file yg sama
-- jangan masukin database, cookie sesi, data pribadi, atau hasil log yg sensitif ke repo
-- perintah jalanin aplikasi ditambahin setelah kerangka server selesai
+butuh PHP versi `8.1` atau yg lebih baru, modul session, sama ekstensi PDO sqlite
 
-## gaya coding
+buka terminal di folder proyek, trus jalanin server dgan PHP standar
 
-- PHP pake strict types tepat di baris ketiga
-- indentasi empat spasi, kurung kurawal pembuka sebaris dgan deklarasi atau kondisi
-- ga ada baris kosong di dalem fungsi
-- statement, kondisi, string, sama array PHP ditulis utuh satu baris
-- concatenation rapet dgan operand
-- komentar sama commit pake bahasa indonesia santai, huruf kecil kecuali singkatan teknis, tanpa tanda titik
-- kata atau sama walaupun tetep ditulis lengkap
-- README ngikutin gaya bahasa yg sama, nama file sama perintah tetep sesuai sintaks aslinya
+```powershell
+& "C:\Dev\PHP-Kemjar\php.exe" -S 127.0.0.1:8000 -t vulnerable/public
+```
 
-## ruang lingkup uji
+buka [portal anggota](http://127.0.0.1:8000) di browser, lokasi PHP disesuaiin sama laptop masing masing
+
+buat brentiin server, pencet `Ctrl+C` di terminal
+
+## Ruang Lingkup Uji
 
 pengujian cuma buat aplikasi lokal milik kelompok dgan akun fiktif, bukti hasil dicatet sesuai kondisi yg beneran ditemuin
