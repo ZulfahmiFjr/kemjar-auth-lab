@@ -41,8 +41,8 @@ bikin aplikasi web sederhana sendiri, trus ngikutin alur SOP dari pembuatan targ
 - [x] bikin database sama dua akun uji
 - [x] bikin login sama logout
 - [x] bikin dashboard sama API daftar anggota versi rentan
-- [ ] bikin ubah sandi versi rentan
-- [ ] nyatet enumerasi sama bukti eksploitasi
+- [x] bikin ubah sandi versi rentan
+- [x] nyatet enumerasi sama bukti eksploitasi
 - [ ] nambah autentikasi API sama perbaikan ubah sandi
 - [ ] nguji ulang serangan sama alur pengguna yg sah
 - [ ] nyusun laporan sama nyiapin demo

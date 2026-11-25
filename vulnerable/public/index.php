@@ -73,6 +73,14 @@ function e(string $value):string{
         <h2>Daftar anggota</h2>
         <button type="button" id="load-users">Tampilkan anggota</button>
         <pre id="users" hidden></pre>
+        <h2>Ubah kata sandi</h2>
+        <form id="change-password-form">
+            <input type="hidden" name="user_id" value="<?= e((string) $user['id']) ?>">
+            <label for="new-password">Kata sandi baru</label>
+            <input id="new-password" name="new_password" type="password" autocomplete="new-password" minlength="8" required>
+            <button type="submit">Simpan kata sandi</button>
+        </form>
+        <p id="password-status" role="status" hidden></p>
         <form method="post" action="index.php">
             <input type="hidden" name="csrf" value="<?= e($_SESSION['csrf']) ?>">
             <input type="hidden" name="action" value="logout">
@@ -106,6 +114,31 @@ loadUsers?.addEventListener('click', async () => {
         result.textContent = JSON.stringify(data.users, null, 2);
     } catch (error) {
         result.textContent = error.message;
+    }
+});
+const passwordForm = document.querySelector('#change-password-form');
+passwordForm?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const status = document.querySelector('#password-status');
+    const formData = new FormData(passwordForm);
+    status.hidden = false;
+    status.className = '';
+    try {
+        const response = await fetch('api.php?action=change-password', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                user_id: formData.get('user_id'),
+                new_password: formData.get('new_password')
+            })
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Permintaan gagal.');
+        status.textContent = data.message;
+        passwordForm.reset();
+    } catch (error) {
+        status.className = 'error';
+        status.textContent = error.message;
     }
 });
 </script>
