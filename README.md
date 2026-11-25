@@ -26,8 +26,8 @@ bikin aplikasi web sederhana sendiri, trus ngikutin alur SOP dari pembuatan targ
 
 centang bagian setelah beneran selesai dan dicek bareng
 
-- [ ] nyiapin lingkungan PHP sama ekstensi PDO sqlite
-- [ ] bikin kerangka halaman awal
+- [x] nyiapin lingkungan PHP sama ekstensi PDO sqlite
+- [x] bikin kerangka halaman awal
 - [ ] bikin database sama dua akun uji
 - [ ] bikin login sama logout
 - [ ] bikin dashboard sama API daftar anggota versi rentan
