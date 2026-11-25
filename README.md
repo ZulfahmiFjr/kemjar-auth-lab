@@ -39,7 +39,7 @@ bikin aplikasi web sederhana sendiri, trus ngikutin alur SOP dari pembuatan targ
 - [x] nyiapin lingkungan PHP sama ekstensi PDO sqlite
 - [x] bikin kerangka halaman awal
 - [x] bikin database sama dua akun uji
-- [ ] bikin login sama logout
+- [x] bikin login sama logout
 - [ ] bikin dashboard sama API daftar anggota versi rentan
 - [ ] bikin ubah sandi versi rentan
 - [ ] nyatet enumerasi sama bukti eksploitasi
