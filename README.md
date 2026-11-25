@@ -28,7 +28,7 @@ bikin aplikasi web sederhana sendiri, trus ngikutin alur SOP dari pembuatan targ
 
 ## Fitur yang Direncanain
 
-- dua akun uji dgan data fiktif
+- dua akun uji dengan data fiktif
 - login sama logout pake sesi
 - dashboard dgan daftar anggota
 - formulir ubah kata sandi
@@ -40,7 +40,7 @@ bikin aplikasi web sederhana sendiri, trus ngikutin alur SOP dari pembuatan targ
 - [x] bikin kerangka halaman awal
 - [x] bikin database sama dua akun uji
 - [x] bikin login sama logout
-- [ ] bikin dashboard sama API daftar anggota versi rentan
+- [x] bikin dashboard sama API daftar anggota versi rentan
 - [ ] bikin ubah sandi versi rentan
 - [ ] nyatet enumerasi sama bukti eksploitasi
 - [ ] nambah autentikasi API sama perbaikan ubah sandi

@@ -61,6 +61,7 @@ function e(string $value):string{
         input { box-sizing: border-box; width: 100%; padding: 10px; font: inherit; border: 1px solid #8799b2; border-radius: 6px; }
         button { margin-top: 20px; padding: 10px 18px; background: #2357bf; color: white; border: 0; border-radius: 6px; font: inherit; cursor: pointer; }
         .error { color: #a02222; }
+        pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #f0f4fa; padding: 16px; }
     </style>
 </head>
 <body>
@@ -69,6 +70,9 @@ function e(string $value):string{
         <?php if($user): ?>
         <h2>Halo, <?= e($user['username']) ?></h2>
         <p>Email: <?= e($user['email']) ?></p>
+        <h2>Daftar anggota</h2>
+        <button type="button" id="load-users">Tampilkan anggota</button>
+        <pre id="users" hidden></pre>
         <form method="post" action="index.php">
             <input type="hidden" name="csrf" value="<?= e($_SESSION['csrf']) ?>">
             <input type="hidden" name="action" value="logout">
@@ -90,5 +94,20 @@ function e(string $value):string{
         </form>
         <?php endif; ?>
     </main>
+<script>
+const loadUsers = document.querySelector('#load-users');
+loadUsers?.addEventListener('click', async () => {
+    const result = document.querySelector('#users');
+    result.hidden = false;
+    try {
+        const response = await fetch('api.php?action=users');
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Permintaan gagal.');
+        result.textContent = JSON.stringify(data.users, null, 2);
+    } catch (error) {
+        result.textContent = error.message;
+    }
+});
+</script>
 </body>
 </html>
