@@ -6,8 +6,8 @@ Proyek Akhir Praktikum Keamanan Jaringan 2026
 
 | Nama | NPM |
 | --- | --- |
-| Zulfahmi Fajri | 2406345425 |
 | Muhammad Hashif Jade | 2406396786 |
+| Zulfahmi Fajri | 2406345425 |
 
 **Topik**
 
