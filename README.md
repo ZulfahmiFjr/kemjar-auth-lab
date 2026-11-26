@@ -43,8 +43,8 @@ bikin aplikasi web sederhana sendiri, trus ngikutin alur SOP dari pembuatan targ
 - [x] bikin dashboard sama API daftar anggota versi rentan
 - [x] bikin ubah sandi versi rentan
 - [x] nyatet enumerasi sama bukti eksploitasi
-- [ ] nambah autentikasi API sama perbaikan ubah sandi
-- [ ] nguji ulang serangan sama alur pengguna yg sah
+- [x] nambah autentikasi API sama perbaikan ubah sandi
+- [x] nguji ulang serangan sama alur pengguna yg sah
 - [ ] nyusun laporan sama nyiapin demo
 
 ## Jalanin Lokal
@@ -53,11 +53,19 @@ butuh PHP versi `8.1` atau yg lebih baru, modul session, sama ekstensi PDO sqlit
 
 buka terminal di folder proyek, trus jalanin server dgan PHP standar
 
+versi rentan (port `8000`):
+
 ```powershell
 & "C:\Dev\PHP-Kemjar\php.exe" -S 127.0.0.1:8000 -t vulnerable/public
 ```
 
-buka [portal anggota](http://127.0.0.1:8000) di browser, lokasi PHP disesuaiin sama laptop masing masing
+versi perbaikan (port 8001):
+
+```powershell
+& "C:\Dev\PHP-Kemjar\php.exe" -S 127.0.0.1:8001 -t patched/public
+```
+
+buka [versi rentan](http://127.0.0.1:8000) atau [versi rentan](http://127.0.0.1:8001) di browser, lokasi PHP disesuaiin sama laptop masing masing
 
 buat brentiin server, pencet `Ctrl+C` di terminal
 
