@@ -45,7 +45,7 @@ bikin aplikasi web sederhana sendiri, trus ngikutin alur SOP dari pembuatan targ
 - [x] nyatet enumerasi sama bukti eksploitasi
 - [x] nambah autentikasi API sama perbaikan ubah sandi
 - [x] nguji ulang serangan sama alur pengguna yg sah
-- [ ] nyusun laporan sama nyiapin demo
+- [x] nyusun laporan sama nyiapin demo
 
 ## Jalanin Lokal
 
