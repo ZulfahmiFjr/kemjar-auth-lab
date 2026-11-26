@@ -9,8 +9,9 @@ set_exception_handler(static function(Throwable $e):void{
     exit('Terjadi kesalahan server, periksa log PHP.');
 });
 require __DIR__.'/database.php';
-$db = open_database('vulnerable');
-session_name('kemjar_vulnerable');
+$appMode = $appMode ?? 'vulnerable';
+$db = open_database($appMode);
+session_name('kemjar_'.$appMode);
 session_start(['use_strict_mode' => true, 'cookie_httponly' => true, 'cookie_samesite' => 'Strict']);
 header('Cache-Control: no-store');
 $_SESSION['csrf'] ??= bin2hex(random_bytes(32));
