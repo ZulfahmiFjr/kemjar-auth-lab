@@ -65,7 +65,7 @@ versi perbaikan (port 8001):
 & "C:\Dev\PHP-Kemjar\php.exe" -S 127.0.0.1:8001 -t patched/public
 ```
 
-buka [versi rentan](http://127.0.0.1:8000) atau [versi rentan](http://127.0.0.1:8001) di browser, lokasi PHP disesuaiin sama laptop masing masing
+buka [versi rentan](http://127.0.0.1:8000) atau [versi perbaikan](http://127.0.0.1:8001) di browser, lokasi PHP disesuaiin sama laptop masing masing
 
 buat brentiin server, pencet `Ctrl+C` di terminal
 
